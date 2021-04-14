@@ -1082,9 +1082,9 @@
 					"Creando una escena": "manual/es/introduction/Creating-a-scene",
 					"Instalación": "manual/es/introduction/Installation",
 					"Soporte del navegador": "manual/es/introduction/Browser-support",
-					"Comprobar la compatibilidad WebGL": "manual/es/introduction/WebGL-compatibility-check",
-					"Cómo ejecutar cosas localmente": "manual/es/introduction/How-to-run-things-locally",
-					"Dibujar líneas": "manual/es/introduction/Drawing-lines",
+					"Comprobando la compatibilidad con WebGL": "manual/es/introduction/WebGL-compatibility-check",
+					"Cómo ejecutar algo localmente": "manual/es/introduction/How-to-run-things-locally",
+					"Dibujando líneas": "manual/es/introduction/Drawing-lines",
 					"Creando texto": "manual/es/introduction/Creating-text",
 					"Cargando modelos 3D": "manual/es/introduction/Loading-3D-models",
 					"Librerías y Plugins": "manual/es/introduction/Libraries-and-Plugins",
@@ -1093,7 +1093,7 @@
 				},
 		
 				"Próximos pasos": {
-					"Cómo actualizar las cosas": "manual/es/introduction/How-to-update-things",
+					"Cómo actualizar elementos": "manual/es/introduction/How-to-update-things",
 					"Cómo deshacerse de los objetos": "manual/es/introduction/How-to-dispose-of-objects",
 					"Cómo crear contenido VR": "manual/es/introduction/How-to-create-VR-content",
 					"Cómo utilizar el post-processing": "manual/es/introduction/How-to-use-post-processing",

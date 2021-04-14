@@ -9,78 +9,57 @@
 </head>
 
 <body>
-	<h1>[name]</h1>
+	<h1>Cargando modelos 3D</h1>
 
 	<p>
-		3D models are available in hundreds of file formats, each with different
-		purposes, assorted features, and varying complexity. Although
-		<a href="https://github.com/mrdoob/three.js/tree/dev/examples/jsm/loaders" target="_blank" rel="noopener">
-		three.js provides many loaders</a>, choosing the right format and
-		workflow will save time and frustration later on. Some formats are
-		difficult to work with, inefficient for realtime experiences, or simply not
-		fully supported at this time.
+		Los modelos 3D están disponibles en cientos de formatos de archivos, cada uno con diferentes propósitos, funcionalidades diferentes y complejidad variable. Aunque <a href="https://github.com/mrdoob/three.js/tree/dev/examples/jsm/loaders" target="_blank" rel="noopener">three.js proporciona muchos loaders</a>, elegir el formato y el flujo de trabajo correctos ahorrará tiempo y frustación más adelante. Algunos formatos son difíciles de trabajar, ineficientes en experiencias en tiempo real, o simplemente no son totalmente compatibles en este momento.
 	</p>
 
 	<p>
-		This guide provides a workflow recommended for most users, and suggestions
-		for what to try if things don't go as expected.
+		Esta guía proporciona un flujo de trabajo recomendado para la mayoría de usuarios, y sugerencias sobre qué hacer si las cosas no van como se espera.
 	</p>
 
-	<h2>Before we start</h2>
+	<h2>Antes de empezar</h2>
 
 	<p>
-		If you're new to running a local server, begin with
-		[link:#manual/introduction/How-to-run-things-locally how to run things locally]
-		first. Many common errors viewing 3D models can be avoided by hosting files
-		correctly.
+		Si es la primera vez que ejecutas un servidor local, empieza con [link:#manual/introduction/How-to-run-things-locally como ejecutar algo localmente] primero. Muchos errores comunes de visualización de modelos 3D pueden evitarse alojando los archivos correctamente.
 	</p>
 
-	<h2>Recommended workflow</h2>
+	<h2>Flujo de trabajo recomendado</h2>
 
 	<p>
-		Where possible, we recommend using glTF (GL Transmission Format). Both
-		<small>.GLB</small> and <small>.GLTF</small> versions of the format are
-		well supported. Because glTF is focused on runtime asset delivery, it is
-		compact to transmit and fast to load. Features include meshes, materials,
-		textures, skins, skeletons, morph targets, animations, lights, and
-		cameras.
+		Siempre que sea posible, se recomienda utilizar glTF (GL Transmission Format). Tanto las versiones del formato <small>.GLB</small> como <small>.GLTF</small> están bien soportadas. Dado que glTF se centra en la transmisión de recursos en tiempo de ejecución, es compacto para transmitir y rápido para cargar. Incluye mallas, materiales, texturas, skins, esqueletos, objetos morfológicos, animaciones, luces y cámaras.
 	</p>
 
 	<p>
-		Public-domain glTF files are available on sites like
-		<a href="https://sketchfab.com/models?features=downloadable&sort_by=-likeCount&type=models" target="_blank" rel="noopener">
-		Sketchfab</a>, or various tools include glTF export:
+		Los archivos glTF de dominio público están disponibles en sitios como <a href="https://sketchfab.com/models?features=downloadable&sort_by=-likeCount&type=models" target="_blank" rel="noopener">Sketchfab</a>, o varias herramientras que incluyen la exportación de glTF:
 	</p>
 
 	<ul>
-		<li><a href="https://www.blender.org/" target="_blank" rel="noopener">Blender</a> by the Blender Foundation</li>
-		<li><a href="https://www.allegorithmic.com/products/substance-painter" target="_blank" rel="noopener">Substance Painter</a> by Allegorithmic</li>
-		<li><a href="https://www.foundry.com/products/modo" target="_blank" rel="noopener">Modo</a> by Foundry</li>
-		<li><a href="https://www.marmoset.co/toolbag/" target="_blank" rel="noopener">Toolbag</a> by Marmoset</li>
-		<li><a href="https://www.sidefx.com/products/houdini/" target="_blank" rel="noopener">Houdini</a> by SideFX</li>
-		<li><a href="https://labs.maxon.net/?p=3360" target="_blank" rel="noopener">Cinema 4D</a> by MAXON</li>
-		<li><a href="https://github.com/KhronosGroup/COLLADA2GLTF" target="_blank" rel="noopener">COLLADA2GLTF</a> by the Khronos Group</li>
-		<li><a href="https://github.com/facebookincubator/FBX2glTF" target="_blank" rel="noopener">FBX2GLTF</a> by Facebook</li>
-		<li><a href="https://github.com/AnalyticalGraphicsInc/obj2gltf" target="_blank" rel="noopener">OBJ2GLTF</a> by Analytical Graphics Inc</li>
-		<li>&hellip;and <a href="http://github.khronos.org/glTF-Project-Explorer/" target="_blank" rel="noopener">many more</a></li>
+		<li><a href="https://www.blender.org/" target="_blank" rel="noopener">Blender</a> de la Fundación Blender</li>
+		<li><a href="https://www.allegorithmic.com/products/substance-painter" target="_blank" rel="noopener">Substance Painter</a> de Allegorithmic</li>
+		<li><a href="https://www.foundry.com/products/modo" target="_blank" rel="noopener">Modo</a> de Foundry</li>
+		<li><a href="https://www.marmoset.co/toolbag/" target="_blank" rel="noopener">Toolbag</a> de Marmoset</li>
+		<li><a href="https://www.sidefx.com/products/houdini/" target="_blank" rel="noopener">Houdini</a> de SideFX</li>
+		<li><a href="https://labs.maxon.net/?p=3360" target="_blank" rel="noopener">Cinema 4D</a> de MAXON</li>
+		<li><a href="https://github.com/KhronosGroup/COLLADA2GLTF" target="_blank" rel="noopener">COLLADA2GLTF</a> del Grupo Khronos</li>
+		<li><a href="https://github.com/facebookincubator/FBX2glTF" target="_blank" rel="noopener">FBX2GLTF</a> de Facebook</li>
+		<li><a href="https://github.com/AnalyticalGraphicsInc/obj2gltf" target="_blank" rel="noopener">OBJ2GLTF</a> de Analytical Graphics Inc</li>
+		<li>&hellip;y <a href="http://github.khronos.org/glTF-Project-Explorer/" target="_blank" rel="noopener">muchos más</a></li>
 	</ul>
 
 	<p>
-		If your preferred tools do not support glTF, consider requesting glTF
-		export from the authors, or posting on
-		<a href="https://github.com/KhronosGroup/glTF/issues/1051" target="_blank" rel="noopener">the glTF roadmap thread</a>.
+		Si tus herramientras favoritas no soportan glTF, considera la posibilidad de solicitar la exportación de glTF a los autores, o de publicarlo en <a href="https://github.com/KhronosGroup/glTF/issues/1051" target="_blank" rel="noopener">el hilo de la hoja de ruta de glTF</a>.
 	</p>
 
 	<p>
-		When glTF is not an option, popular formats such as FBX, OBJ, or COLLADA
-		are also available and regularly maintained.
+		Cuando glTF no es una opción, también se pueden utilizar formatos populares como FBX, OBJ o COLLADA, que se mantienen con regularidad.
 	</p>
 
-	<h2>Loading</h2>
+	<h2>Cargando</h2>
 
 	<p>
-		Only a few loaders (e.g. [page:ObjectLoader]) are included by default with
-		three.js — others should be added to your app individually.
+		Solo unos pocos loaders (p. ej. [page:ObjectLoader]) se incluyen por defecto en three.js - los demás deben añadirse a tu aplicación de manera individual.
 	</p>
 
 	<code>
@@ -88,9 +67,7 @@
 	</code>
 
 	<p>
-		Once you've imported a loader, you're ready to add a model to your scene. Syntax varies among
-		different loaders — when using another format, check the examples and documentation for that
-		loader. For glTF, usage with global scripts would be:
+		Una vez que hayas impostado un loader, en condiciones para añadir un modelo a tu escena. La sintaxis varían entre los distintos loaders - cuando utilices otro formato, revisa los ejemplos y la documentación de ese loader. Para glTF, el uso con scripts globales sería:
 	</p>
 
 	<code>
@@ -108,58 +85,38 @@
 	</code>
 
 	<p>
-		See [page:GLTFLoader GLTFLoader documentation] for further details.
+		Consulta la [page:GLTFLoader documentacion de GLTFLoader] para más detalles.
 	</p>
 
-	<h2>Troubleshooting</h2>
+	<h2>Solucionar problemas</h2>
 
 	<p>
-		You've spent hours modeling an artisanal masterpiece, you load it into
-		the webpage, and — oh no! 😭 It's distorted, miscolored, or missing entirely.
-		Start with these troubleshooting steps:
+		Has pasado horas modelando una obra maestra artesanal, la cargas en la página web y - ¡oh, no! 😭 Está distorsionada, mal coloreada o no se ve por completo.
+		Empieza con estos pasos para solucionar el problema:
 	</p>
 
 	<ol>
 		<li>
-			Check the JavaScript console for errors, and make sure you've used an
-			<em>onError</em> callback when calling <em>.load()</em> to log the result.
+			Comprueba si hay errores en la consola de JavaScript, y asegúrate de haber utilizado un callback <em>onError</em> al llamar a <em>.load()</em> para registrar el resultado.
 		</li>
 		<li>
-			View the model in another application. For glTF, drag-and-drop viewers
-			are available for
-			<a href="https://gltf-viewer.donmccurdy.com/" target="_blank" rel="noopener">three.js</a> and
-			<a href="http://sandbox.babylonjs.com/" target="_blank" rel="noopener">babylon.js</a>. If the model
-			appears correctly in one or more applications,
-			<a href="https://github.com/mrdoob/three.js/issues/new" target="_blank" rel="noopener">file a bug against three.js</a>.
-			If the model cannot be shown in any application, we strongly encourage
-			filing a bug with the application used to create the model.
+			Visualiza el modelo en otra aplicación. Para glTF, los visores drag-and-drop están disponibles para <a href="https://gltf-viewer.donmccurdy.com/" target="_blank" rel="noopener">three.js</a> y <a href="http://sandbox.babylonjs.com/" target="_blank" rel="noopener">babylon.js</a>. Si el modelo se muestra correctamente en una o varias aplicaciones, <a href="https://github.com/mrdoob/three.js/issues/new" target="_blank" rel="noopener">reporta un error a three.js</a>. Si el modelo no puede mostrarse en ninguna aplicación, recomendamos encarecidamente que se reporte un error a la aplicación utilizada para crear el modelo.
 		</li>
 		<li>
-			Try scaling the model up or down by a factor of 1000. Many models are
-			scaled differently, and large models may not appear if the camera is
-			inside the model.
+			Prueba a aumentar o reducir el modelo a una escala de 1000. Muchos modelos se escalan de forma diferente, y los modelos grandes pueden no verse si la cámara está dentro del modelo.
 		</li>
 		<li>
-			Try to add and position a light source. The model may be hidden in the dark.
+			Intenta añadir y posicionar una fuente de luz. El modelo puede quedar oculto en la oscuridad.
 		</li>
 		<li>
-			Look for failed texture requests in the network tab, like
-			<em>C:\\Path\To\Model\texture.jpg</em>. Use paths relative to your
-			model instead, such as <em>images/texture.jpg</em> — this may require
-			editing the model file in a text editor.
+			Busca las peticiones de textura fallidas en la pestaña de red, como <em>C:\\Path\To\Model\texture.jpg</em>. Utiliza rutas relativas a tu modelo en su defecto, como <em>images/texture.jpg</em> - esto puede requerir la edición del archivo del modelo en un editor de texto.
 		</li>
 	</ol>
 
-	<h2>Asking for help</h2>
+	<h2>Solicitar ayuda</h2>
 
 	<p>
-		If you've gone through the troubleshooting process above and your model
-		still isn't working, the right approach to asking for help will get you to
-		a solution faster. Post a question on the
-		<a href="https://discourse.threejs.org/" target="_blank" rel="noopener">three.js forum</a> and, whenever possible,
-		include your model (or a simpler model with the same problem) in any formats
-		you have available. Include enough information for someone else to reproduce
-		the issue quickly — ideally, a live demo.
+		Si has seguido el proceso de resolución de problemas anterior y tu modelo sigue sin funcionar, el modo adecuado de pedir ayuda te llevará a una solución más fácilmente. Publica una pregunta en el <a href="https://discourse.threejs.org/" target="_blank" rel="noopener">foro de three.js</a> y, siempre que sea posible, incluye tu modelo (o un modelo más sencillo con el mismo problema) en los formator que tengas disponibles. Incluye la información suficiente para que otra persona pueda reproducir el problema fácilmente - a ser posible, una demo en vivo.
 	</p>
 
 </body>

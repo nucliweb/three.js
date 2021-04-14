@@ -7,48 +7,45 @@
 		<link type="text/css" rel="stylesheet" href="page.css" />
 	</head>
 	<body>
-		<h1>[name]</h1>
+		<h1>Preguntas frecuentes</h1>
 
-		<h2>Which 3D model format is best supported?</h2>
+		<h2>¿Qué formato de modelo 3D es el más soportado?</h2>
 		<div>
 			<p>
-				The recommended format for importing and exporting assets is glTF (GL Transmission Format). Because glTF is focused on runtime asset delivery, it is compact to transmit and fast to load.
+				El formato recomendado para importar y exportar recursos es glTF (GL Transmission Format). Dado que glTF se centra en la transmisión de recursos en tiempo de ejecución, es compacto para transmitir y rápido para cargar.
 			</p>
 			<p>
-				three.js provides loaders for many other popular formats like FBX, Collada or OBJ as well. Nevertheless, you should always try to establish a glTF based workflow in your projects first. For more information, see [link:#manual/introduction/Loading-3D-models loading 3D models].
+				three.js proporciona loaders para muchos otros formatos populares como FBX, Collada u OBJ también. Sin embargo, deberías intentar establecer siempre un flujo de trabajo en tus proyectos basado en glTF. Para más información, consulta [link:#manual/introduction/Loading-3D-models cargando modelos 3D].
 			</p>
 		</div>
 
-		<h2>Why are there meta viewport tags in examples?</h2>
+		<h2>¿Por qué hay etiquetas meta viewport en los ejemplos</h2>
 		<div>
 				<code>&lt;meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"&gt;</code>
 
-				<p>These tags control viewport size and scale for mobile browsers (where page content may be rendered at different size than visible viewport).</p>
+				<p>Estas etiquetas controlan el tamaño del viewport y el escalado para los navegadores móviles (en los que el contenido de la página puede mostrarse con un tamaño diferente al des viewport).</p>
 
-				<p>[link:https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html Safari: Using the Viewport]</p>
+				<p>[link:https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html Safari: Uso del viewport]</p>
 
-				<p>[link:https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag MDN: Using the viewport meta tag]</p>
+				<p>[link:https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag MDN: Uso del viewport meta tag]</p>
 		</div>
 
-		<h2>How can scene scale be preserved on resize?</h2>
+		<h2>¿Cómo se puede mantener la proporción de la escena al cambiar de tamaño?</h2>
 		<p>
-			We want all objects, regardless of their distance from the camera, to appear the same size, even as the window is resized.
+			Queremos que todos los objetos, independientemente de su distancia a la cámara, se muestren del mismo tamaño, incluso cuando cambie el tamaño de la ventana.
 
-			The key equation to solving this is this formula for the visible height at a given distance:
+			La ecuación clave para resolver esto es esta fórmula para la altura visible a una distancia determinada:
 
 			<code>
 visible_height = 2 * Math.tan( ( Math.PI / 180 ) * camera.fov / 2 ) * distance_from_camera;
 			</code>
-			If we increase the window height by a certain percentage, then what we want is the visible height at all distances
-			to increase by the same percentage.
-
-			This can not be done by changing the camera position. Instead you have to change the camera field-of-view.
-			[link:http://jsfiddle.net/Q4Jpu/ Example].
+			Si incrementamos la altura de la ventana en un determinado porcentaje, lo que queremos es que la altura visible a todas las distancias aumente en el mismo porcentaje.
+			Esto no se puede conseguir cambiando la posición de la cámara. En su lugar, hay que cambiar el campo de visión de la cámara. [link:http://jsfiddle.net/Q4Jpu/ Ejemplo].
 		</p>
 
-		<h2>Why is part of my object invisible?</h2>
+		<h2>¿Por qué una parte de mi objeto es invisible?</h2>
 		<p>
-			This could be because of face culling. Faces have an orientation that  decides which side is which. And the culling removes the backside in normal circumstances. To see if this is your problem, change the material side to THREE.DoubleSide.
+			Esto podría deberse a la exclusión de las caras. Las caras tienen una orientación que decide cuál es el lado. La exclusión elimina la parte posterior en situaciones normales. Para comprobar si este es tu problema, cambia el lado del material a THREE.DoubleSide.
 			<code>material.side = THREE.DoubleSide</code>
 		</p>
 	</body>
